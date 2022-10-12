@@ -9,6 +9,15 @@
   padding-bottom: 5px;
   background: $black-to-bottom;
   z-index: 20;
+
+  @include vp-1919 {
+    position: static;
+    min-height: 100px;
+  }
+
+  @include vp-769 {
+    min-height: 70px;
+  }
 }
 
 .header__inner {
@@ -17,12 +26,27 @@
   justify-content: space-between;
 }
 
+.header__logo {
+  flex-shrink: 0;
+}
+
 .header__links {
   margin: 0;
+  padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
   gap: 120px;
+
+  @include vp-1919 {
+    margin-right: 20px;
+    gap: 20px;
+    align-self: flex-start;
+  }
+
+  @include vp-769 {
+    margin-right: 10px;
+  }
 }
 
 .header__link {
@@ -31,41 +55,56 @@
   gap: 15px;
   color: $color-alice-blue;
   line-height: 1.13;
-  transition: color $trans-default;
+  transition: color $trans-default, opacity $trans-default;
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover {
       color: $color-deep-sky-blue;
+
+      @include vp-1919 {
+        svg {
+          color: $color-alice-blue;
+        }
+      }
     }
 
+    &:active {
+      opacity: 0.6;
+    }
 
     &:focus-visible {
       color: $color-deep-sky-blue;
+
+      @include vp-1919 {
+        svg {
+          color: $color-alice-blue;
+        }
+      }
     }
   }
 
-  &::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    flex-shrink: 0;
-  }
+  @include vp-1919 {
+    padding: 10px;
 
-  &--mail {
-    &::before {
-      background-image: url("../img/svg/email-icon.svg");
+    span {
+      display: none;
     }
   }
 
-  &--phone {
-    &::before {
-      background-image: url("../img/svg/phone-icon.svg");
+  svg {
+    color: $color-deep-sky-blue;
+
+    @include vp-1919 {
+      transition: color $trans-default;
+    }
+  }
+
+  span {
+    @include vp-1919 {
+      display: none;
     }
   }
 }
-
 
 .header__callback-button {
   margin-right: 60px;
@@ -76,10 +115,22 @@
   line-height: 1.14;
 
   @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
+    &:hover {
       color: $color-deep-sky-blue;
       border: 1px solid $color-deep-sky-blue;
     }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      color: $color-deep-sky-blue;
+      border: 1px solid $color-deep-sky-blue;
+    }
+  }
+
+  @include vp-1919 {
+    display: none;
   }
 }

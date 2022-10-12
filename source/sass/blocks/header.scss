@@ -68,10 +68,6 @@
       }
     }
 
-    &:active {
-      opacity: 0.6;
-    }
-
     &:focus-visible {
       color: $color-deep-sky-blue;
 
@@ -81,6 +77,10 @@
         }
       }
     }
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @include vp-1919 {
@@ -120,14 +120,14 @@
       border: 1px solid $color-deep-sky-blue;
     }
 
-    &:active {
-      opacity: 0.6;
-    }
-
     &:focus-visible {
       color: $color-deep-sky-blue;
       border: 1px solid $color-deep-sky-blue;
     }
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @include vp-1919 {

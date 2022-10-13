@@ -6,16 +6,17 @@
   min-height: 120px;
   display: grid;
   place-items: center;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 15px;
   background: $black-to-bottom;
   z-index: 20;
 
-  @include vp-1919 {
+  @include vp-1023 {
     position: static;
     min-height: 100px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     min-height: 70px;
   }
 }
@@ -24,27 +25,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header__logo {
-  flex-shrink: 0;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 15px;
 }
 
 .header__links {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-width: 465px;
   display: flex;
   align-items: center;
-  gap: 120px;
+  justify-content: space-between;
+  row-gap: 15px;
+  flex-wrap: wrap;
+  flex-grow: 1;
 
-  @include vp-1919 {
+  @include vp-1023 {
+    flex-grow: 0;
+    justify-content: flex-start;
     margin-right: 20px;
     gap: 20px;
     align-self: flex-start;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-right: 10px;
   }
 }
@@ -61,7 +67,7 @@
     &:hover {
       color: $color-deep-sky-blue;
 
-      @include vp-1919 {
+      @include vp-1023 {
         svg {
           color: $color-alice-blue;
         }
@@ -71,7 +77,7 @@
     &:focus-visible {
       color: $color-deep-sky-blue;
 
-      @include vp-1919 {
+      @include vp-1023 {
         svg {
           color: $color-alice-blue;
         }
@@ -83,7 +89,7 @@
     opacity: 0.6;
   }
 
-  @include vp-1919 {
+  @include vp-1023 {
     padding: 10px;
 
     span {
@@ -94,13 +100,13 @@
   svg {
     color: $color-deep-sky-blue;
 
-    @include vp-1919 {
+    @include vp-1023 {
       transition: color $trans-default;
     }
   }
 
   span {
-    @include vp-1919 {
+    @include vp-1023 {
       display: none;
     }
   }
@@ -131,6 +137,10 @@
   }
 
   @include vp-1919 {
+    margin-right: 0;
+  }
+
+  @include vp-1023 {
     display: none;
   }
 }

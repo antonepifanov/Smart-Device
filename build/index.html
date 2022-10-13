@@ -27,7 +27,7 @@
             </figure>
           </a>
 
-          <ul class="header__links">
+          <ul class="header__links list-reset">
             <li>
               <a class="header__link" href="mailto:info@sd.ru">
                 <span class="visually-hidden">Ссылка для электронной почты info@sd.ru</span>
@@ -72,7 +72,107 @@
         </section>
       </main>
 
-      <footer>
+      <footer class="footer">
+        <div class="footer__inner container">
+          <div class="footer__section footer__section--links">
+            <a>
+              <figure class="footer__logo logo">
+                <picture>
+                  <source type="image/webp" srcset="img/content/logo.webp 1x, img/content/logo@2x.webp 2x">
+                  <img src="./img/content/logo.png" srcset="img/content/logo@2x.png 2x" width="215" height="55" alt="Логотип Smart-Device">
+                </picture>
+              </figure>
+            </a>
+
+            <ul class="footer__social list-reset">
+              <li>
+                <a class="footer__social-link" href="#"  rel="noopener" target="_blank">
+                  <svg width="30" height="30" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#ok-icon"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Ссылка на Одноклассники</span>
+                </a>
+              </li>
+
+              <li>
+                <a class="footer__social-link" href="#"  rel="noopener" target="_blank">
+                  <svg width="30" height="30" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#vk-icon"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Ссылка на ВКонтакте</span>
+                </a>
+              </li>
+
+              <li>
+                <a class="footer__social-link" href="#"  rel="noopener" target="_blank">
+                  <svg width="30" height="30" role="img" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#pinterest-icon"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Ссылка на Pinterest</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <nav class="footer__section footer__section--nav accordeon">
+            <strong class="footer__section-title accordeon__title">Разделы сайта</strong>
+
+            <ul class="footer__section-list list-reset accordeon__content">
+              <li>
+                <a class="footer__section-item" href="#">О Компаниии</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Продукты</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Производство печатных<br>плат</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Монтаж печатных плат</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Комплектующие</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Доставка</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__section footer__section--tel accordeon">
+            <strong class="footer__section-title accordeon__title">Наш офис</strong>
+
+            <ul class="footer__section-list list-reset accordeon__content">
+              <li>
+                <address class="footer__section-item">г. Мытищи, Олимпийский проспект,<br>д.10</address>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="tel:+79253895829">+7 (925) 389-58-29</a>
+              </li>
+
+              <li>
+                <a class="footer__section-item" href="tel:+79253647813">+7 (925) 364-78-13</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
 

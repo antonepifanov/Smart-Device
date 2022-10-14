@@ -41,6 +41,10 @@
     flex-basis: unset;
   }
 
+  @include vp-767 {
+    border-bottom: 1px solid rgba($color-alice-blue-2, 0.7);
+  }
+
   &--links {
     gap: 25px;
 
@@ -64,6 +68,14 @@
 
     @include vp-1919 {
       flex-grow: unset;
+    }
+
+    .footer__section-item {
+      max-width: 220px;
+
+      @include vp-1023 {
+        max-width: unset;
+      }
     }
   }
 }
@@ -119,6 +131,11 @@
   @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
+    padding-top: 20px;
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -140,15 +157,15 @@
     padding-left: 25px;
     padding-right: 25px;
     min-height: unset;
+    gap: 10px;
+
+    address {
+      margin-bottom: 5px;
+    }
   }
 
   li {
     display: flex;
-    min-width: 220px;
-
-    @include vp-1023 {
-      min-width: unset;
-    }
   }
 }
 
@@ -159,6 +176,11 @@
   font-style: normal;
   color: rgba($color-default-white, 0.7);
   transition: color $trans-default, opacity $trans-default;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 1.79;
+  }
 
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover[href] {

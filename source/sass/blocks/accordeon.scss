@@ -1,46 +1,76 @@
 .accordeon {
-  border-bottom: 1px solid #444444;
-  padding-bottom: 10px;
+  &--active {
+    .accordeon__title {
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    .accordeon__content {
+      @include vp-767 {
+        opacity: 1;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &--no-js {
+    @include vp-767 {
+      .accordeon__title {
+        &::after {
+          display: none;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+      .accordeon__content {
+        max-height: unset;
+        opacity: 1;
+        padding-bottom: 20px;
+      }
+    }
+  }
 }
 
 .accordeon__title {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 20px;
-  border: none;
+  @include vp-767 {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  cursor: pointer;
-  text-align: start;
-  font-size: 18px;
-  font-family: inherit;
+  &::after {
+    @include vp-767 {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: $color-silver;
+    }
+  }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordeon__title::after {
-  content: '+';
-  font-size: 14px;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
-
-.accordeon__title--active::after {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
+  &::before {
+    @include vp-767 {
+      position: absolute;
+      content: "";
+      top: 20px;
+      right: 32px;
+      width: 1px;
+      height: 15px;
+      background-color: $color-silver;
+      transition: opacity $trans-default;
+    }
+  }
 }
 
 .accordeon__content {
-  padding-top: 10px;
-  font-size: 14px;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
-  opacity: 0;
-}
-
-.accordeon__content--visible {
-  opacity: 1;
+  @include vp-767 {
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity $trans-default, max-height $trans-default;
+    opacity: 0;
+  }
 }

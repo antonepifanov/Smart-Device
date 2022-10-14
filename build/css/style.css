@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -429,6 +431,7 @@ html {
   line-height: 24px;
   font-family: "PT Mono", "Consolas", monospace;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -653,6 +656,7 @@ button,
   color: #F2F5F6;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
+  line-height: 1.1;
   letter-spacing: 0.05em;
   background-color: rgba(255, 255, 255, 0);
   border: none;
@@ -1124,6 +1128,91 @@ button,
   transition: color 0.3s ease;
 }
 
+.title {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.about::before {
+  content: "";
+  width: 150px;
+  height: 320px;
+  background-image: url("../img/about.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.about__info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+}
+
+.about__info-detail[open] {
+  position: relative;
+}
+
+.about__info-detail[open] summary {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+}
+
+.about__info-detail[open] summary::before {
+  content: "Свернуть";
+}
+
+.about__info-detail summary {
+  position: relative;
+  border: 1px solid #00B2FF;
+  color: #00B2FF;
+  min-width: 180px;
+  height: 45px;
+  list-style: none;
+}
+
+.about__info-detail summary:active {
+  opacity: 0.6;
+}
+
+.about__info-detail summary::before {
+  position: absolute;
+  content: "Подробнее";
+  width: calc(100% - 3px);
+  left: 2px;
+  right: 1px;
+  top: 50%;
+  -webkit-transform: translateY(calc(-50% + 1px));
+  -ms-transform: translateY(calc(-50% + 1px));
+  transform: translateY(calc(-50% + 1px));
+  line-height: 1;
+  background-color: #ffffff;
+  color: #00B2FF;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.about__info-detail summary::webkit-appearance {
+  display: none;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1137,6 +1226,7 @@ button,
   }
 
   .header__link:focus-visible {
+    outline-style: groove;
     color: #00B2FF;
   }
 
@@ -1146,6 +1236,7 @@ button,
   }
 
   .header__callback-button:focus-visible {
+    outline-style: groove;
     color: #00B2FF;
     border: 1px solid #00B2FF;
   }
@@ -1156,6 +1247,7 @@ button,
   }
 
   .hero__button:focus-visible {
+    outline-style: groove;
     color: #00B2FF;
     background-color: #F2F5F6;
   }
@@ -1165,6 +1257,7 @@ button,
   }
 
   .footer__social-link:focus-visible {
+    outline-style: groove;
     color: #00B2FF;
   }
 
@@ -1173,6 +1266,7 @@ button,
   }
 
   .footer__section-item:focus-visible[href] {
+    outline-style: groove;
     color: #00B2FF;
   }
 
@@ -1184,6 +1278,25 @@ button,
 
   .features__item:hover p {
     color: #F2F5F6;
+  }
+
+  .about__info-detail summary:hover {
+    background-color: #00B2FF;
+  }
+
+  .about__info-detail summary:hover::before {
+    color: #F2F5F6;
+    background-color: #00B2FF;
+  }
+
+  .about__info-detail summary:focus-visible {
+    outline-style: groove;
+    background-color: #00B2FF;
+  }
+
+  .about__info-detail summary:focus-visible::before {
+    color: #F2F5F6;
+    background-color: #00B2FF;
   }
 }
 
@@ -1558,6 +1671,28 @@ button,
   .features__item p {
     font-size: 14px;
   }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.39;
+  }
+
+  .about {
+    margin-bottom: 80px;
+  }
+
+  .about::before {
+    display: none;
+  }
+
+  .about__info p {
+    font-size: 14px;
+  }
+
+  .about__info-detail summary {
+    min-width: 160px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
@@ -1584,5 +1719,9 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero-1920@2x.jpg");
+  }
+
+  .about::before {
+    background-image: url("../img/about@2x.png");
   }
 }

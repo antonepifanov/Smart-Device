@@ -1,0 +1,116 @@
+.about {
+  display: flex;
+  gap: 100px;
+  align-items: flex-start;
+  margin-bottom: 100px;
+
+  @include vp-767 {
+    margin-bottom: 80px;
+  }
+
+  &::before {
+    content: "";
+    width: 150px;
+    height: 320px;
+    background-image: url("../img/about.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0;
+
+    @include retina {
+      background-image: url("../img/about@2x.png");
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+.about__content {
+
+}
+.about__info {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+}
+
+.about__info-detail {
+  &[open] {
+    position: relative;
+
+    summary {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+
+      &::before {
+        content: "Свернуть";
+      }
+    }
+  }
+
+  summary {
+    position: relative;
+    border: 1px solid $color-deep-sky-blue;
+    color: $color-deep-sky-blue;
+    min-width: 180px;
+    height: 45px;
+    list-style: none;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        background-color: $color-deep-sky-blue;
+
+        &::before {
+          color: $color-alice-blue;
+          background-color: $color-deep-sky-blue;
+        }
+      }
+
+      &:focus-visible {
+        outline-style: groove;
+        background-color: $color-deep-sky-blue;
+
+        &::before {
+          color: $color-alice-blue;
+          background-color: $color-deep-sky-blue;
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    @include vp-767 {
+      min-width: 160px;
+      height: 35px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "Подробнее";
+      width: calc(100% - 3px);
+      left: 2px;
+      right: 1px;
+      top: 50%;
+      transform: translateY(calc(-50% + 1px));
+      line-height: 1;
+      background-color: $color-default-white;
+      color: $color-deep-sky-blue;
+      transition: color $trans-default, background-color $trans-default;
+
+    }
+
+    &::webkit-appearance {
+      display: none;
+    }
+  }
+}

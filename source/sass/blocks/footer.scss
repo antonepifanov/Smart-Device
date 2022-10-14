@@ -110,6 +110,7 @@
     }
 
     &:focus-visible {
+      outline-style: groove;
       color: $color-deep-sky-blue;
     }
   }
@@ -190,6 +191,7 @@
     }
 
     &:focus-visible[href] {
+      outline-style: groove;
       color: $color-deep-sky-blue;
 
       @include vp-1023 {

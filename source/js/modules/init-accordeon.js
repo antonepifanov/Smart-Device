@@ -10,7 +10,7 @@ export const initAccordeon = () => {
   accordeons.forEach((accordeon) => {
     const accordeonTitle = accordeon.querySelector('.accordeon__title');
     accordeonTitle.addEventListener('click', () => {
-      const accordeonStatus = accordeon.classList.contains('accordeon--active')
+      const accordeonIsOpen = accordeon.classList.contains('accordeon--active')
         ? true
         : false;
 
@@ -21,7 +21,7 @@ export const initAccordeon = () => {
         accordeonItem.querySelector('.accordeon__content').style.maxHeight = null;
       });
 
-      if (!accordeonStatus) {
+      if (!accordeonIsOpen) {
         accordeon.classList.add('accordeon--active');
         accordeonPanel.style.maxHeight = `${accordeonPanel.scrollHeight}px`;
       }

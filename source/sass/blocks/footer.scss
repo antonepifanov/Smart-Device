@@ -120,6 +120,7 @@
 }
 
 .footer__section-title {
+  pointer-events: none;
   font-family: $ff-title;
   font-size: 15px;
   font-weight: 400;
@@ -129,6 +130,7 @@
   text-transform: uppercase;
 
   @include vp-767 {
+    pointer-events: auto;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 20px;

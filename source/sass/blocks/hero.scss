@@ -19,6 +19,7 @@
   @include vp-1023 {
     position: relative;
     top: -100px;
+    margin-bottom: -100px;
     padding-top: 0;
     padding-bottom: 15px;
     background-image: url("../img/hero-770.jpg");
@@ -32,6 +33,7 @@
   @include vp-767 {
     min-height: 560px;
     top: -70px;
+    margin-bottom: -70px;
     padding-bottom: 40px;
     background-image: url("../img/hero-320.jpg");
 

@@ -599,7 +599,7 @@ button,
   clip-path: inset(100%);
 }
 
-.list-reset {
+.list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -659,9 +659,9 @@ button,
   border-radius: 3px;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  -o-transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .button--hero {
@@ -1018,6 +1018,7 @@ button,
 }
 
 .footer__section-title {
+  pointer-events: none;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -1070,6 +1071,59 @@ button,
   opacity: 0;
 }
 
+.features {
+  padding-top: 120px;
+  margin-bottom: 120px;
+}
+
+.features__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.features__item {
+  min-height: 300px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #EBEBEB;
+  border-left: 5px solid #00B2FF;
+  color: #00B2FF;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.features__item svg {
+  margin-bottom: 5px;
+}
+
+.features__item strong {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.features__item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #041827;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1120,6 +1174,16 @@ button,
 
   .footer__section-item:focus-visible[href] {
     color: #00B2FF;
+  }
+
+  .features__item:hover {
+    color: #F2F5F6;
+    background-color: #00B2FF;
+    border-color: #00B2FF;
+  }
+
+  .features__item:hover p {
+    color: #F2F5F6;
   }
 }
 
@@ -1191,6 +1255,10 @@ button,
   .footer__logo {
     top: unset;
   }
+
+  .features {
+    padding-top: 120px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1241,6 +1309,7 @@ button,
   .hero {
     position: relative;
     top: -100px;
+    margin-bottom: -100px;
     padding-top: 0;
     padding-bottom: 15px;
     background-image: url("../img/hero-770.jpg");
@@ -1258,6 +1327,16 @@ button,
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     height: auto;
+  }
+
+  .features {
+    padding-top: 88px;
+    margin-bottom: 72px;
+  }
+
+  .features__item {
+    min-height: 360px;
+    padding: 40px 45px;
   }
 }
 
@@ -1306,6 +1385,7 @@ button,
   .hero {
     min-height: 560px;
     top: -70px;
+    margin-bottom: -70px;
     padding-bottom: 40px;
     background-image: url("../img/hero-320.jpg");
   }
@@ -1363,6 +1443,7 @@ button,
   }
 
   .footer__section-title {
+    pointer-events: auto;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 20px;
@@ -1448,6 +1529,34 @@ button,
     -o-transition: opacity 0.3s ease, max-height 0.3s ease;
     transition: opacity 0.3s ease, max-height 0.3s ease;
     opacity: 0;
+  }
+
+  .features {
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .features__item {
+    min-height: 340px;
+    padding: 30px;
+  }
+
+  .features__item strong {
+    font-size: 20px;
+  }
+
+  .features__item p {
+    font-size: 14px;
   }
 }
 

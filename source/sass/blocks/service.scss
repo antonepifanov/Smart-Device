@@ -1,0 +1,228 @@
+.service {
+  background-color: $color-black-pearl;
+  padding-top: 70px;
+  padding-bottom: 140px;
+
+  @include vp-1023 {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 85px;
+  }
+}
+
+.service__inner {
+  h2 {
+    color: $color-default-white;
+    margin-bottom: 50px;
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 85px;
+
+  @include vp-1919 {
+    gap: 30px;
+  }
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  li {
+    display: flex;
+    min-height: 650px;
+    overflow: hidden;
+
+    @include vp-1919 {
+      min-height: 400px;
+    }
+
+    @include vp-1023 {
+      min-height: 250px;
+    }
+  }
+}
+
+.service__card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 50px 40px;
+  transition: opacity $trans-default;
+
+  @include vp-1023 {
+    padding: 40px 45px;
+  }
+
+  @include vp-767 {
+    padding: 30px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        border-right: 1px solid $color-deep-sky-blue;
+        border-bottom: 1px solid $color-deep-sky-blue;
+      }
+    }
+
+    &:focus-visible {
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        border-right: 1px solid $color-deep-sky-blue;
+        border-bottom: 1px solid $color-deep-sky-blue;
+      }
+    }
+  }
+
+  &:active {
+    opacity: 0.6
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-deep-sky-blue;
+    border-top-left-radius: 3px;
+    z-index: 10;
+    transition: background-color $trans-default;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 26px;
+    bottom: 26px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid $color-default-white;
+    border-bottom: 1px solid $color-default-white;
+    border-radius: 1px;
+    transform: rotate(-45deg);
+    z-index: 10;
+    transition: border-color $trans-default;
+
+    @include vp-767 {
+      right: 17px;
+      bottom: 17px;
+    }
+  }
+
+  b {
+    color: $color-default-white;
+    font-family: $ff-title;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    z-index: 30;
+
+    @include vp-767 {
+      font-size: 18px;
+    }
+  }
+
+  &--1 {
+    img {
+      object-position: 16% -15px;
+
+      @include vp-1023 {
+        object-position: 70px 140%;
+      }
+
+      @include vp-767 {
+        object-position: -55px -5px;
+      }
+    }
+  }
+
+  &--2 {
+    img {
+      object-position: 48% -15px;
+
+      @include vp-1023 {
+        object-position: -95px 70%;
+      }
+
+      @include vp-767 {
+        object-position: -50px -70px;
+      }
+    }
+  }
+
+  &--3 {
+    img {
+      object-position: 78% -15px;
+
+      @include vp-1023 {
+        object-position: 120px 120%;
+      }
+
+      @include vp-767 {
+        object-position: right -45px;
+      }
+    }
+  }
+}
+
+.service__card-image {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+
+    @include vp-1023 {
+      transform: scale(2.3);
+    }
+
+    @include vp-767 {
+      transform: scale(2.8);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black-pearl, 0.5);
+    z-index: 5;
+  }
+}

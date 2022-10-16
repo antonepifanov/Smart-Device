@@ -64,7 +64,7 @@
 
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
 
-            <a class="hero__button button button--hero" href="#">
+            <a class="hero__button button button--hero" href="#feedback">
               <span class="hero__button-name">Получить бесплатную консультацию</span>
               <span class="hero__button-name hero__button-name--320">Бесплатная консультация</span>
             </a>
@@ -127,7 +127,7 @@
               <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
 
               <details class="about__info-detail list" aria-label="Подробная информация о компании">
-                <summary class="button"></summary>
+                <summary class="button button--summary"></summary>
 
                 <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
 
@@ -149,7 +149,7 @@
                   <figure class="service__card-image">
                     <picture>
                       <source type="image/webp" srcset="img/content/card.webp 1x, img/content/card@2x.webp 2x">
-                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги">
+                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги" loading="lazy">
                     </picture>
                   </figure>
                 </a>
@@ -162,7 +162,7 @@
                   <figure class="service__card-image">
                     <picture>
                       <source type="image/webp" srcset="img/content/card.webp 1x, img/content/card@2x.webp 2x">
-                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги">
+                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги" loading="lazy">
                     </picture>
                   </figure>
                 </a>
@@ -175,12 +175,48 @@
                   <figure class="service__card-image">
                     <picture>
                       <source type="image/webp" srcset="img/content/card.webp 1x, img/content/card@2x.webp 2x">
-                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги">
+                      <img src="img/content/card.jpg" srcset="img/content/card@2x.jpg 2x" width="350" height="650" alt="Изображение услуги" loading="lazy">
                     </picture>
                   </figure>
                 </a>
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section class="feedback" id="feedback">
+          <div class="feedback__inner container">
+            <div class="feedback__content">
+              <h2 class="title">Остались вопросы? Задайте их&nbsp;нам!</h2>
+
+              <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+
+              <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+                <div class="feedback__form-input form__input">
+                  <label class="visually-hidden" for="name">Введите Ваше имя</label>
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
+                </div>
+
+                <div class="feedback__form-input form__input">
+                  <label class="visually-hidden" for="tel">Введите Ваше имя</label>
+                  <input type="tel" id="tel" name="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+                </div>
+
+                <div class="feedback__form-textarea form__textarea">
+                  <label class="visually-hidden" for="question">Введите Ваш вопрос</label>
+                  <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
+                </div>
+
+                <div class="feddback__form-footer form__footer">
+                  <button class="button button--submit" type="submit">Задать вопрос</button>
+
+                  <div class="feedback__form-checkbox form__checkbox">
+                    <input class="visually-hidden" type="checkbox" id="accept" name="accept" checked required>
+                    <label for="accept">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
       </main>

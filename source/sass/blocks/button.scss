@@ -21,6 +21,18 @@
     background-color: $color-deep-sky-blue;
   }
 
+  &--summary {
+    border: 1px solid $color-deep-sky-blue;
+    color: $color-deep-sky-blue;
+  }
+
+  &--submit {
+    background-color: $color-black-pearl-2;
+    color: $color-default-white;
+    min-width: 265px;
+    min-height: 45px;
+  }
+
   &:disabled {
     opacity: 0.3;
     pointer-events: none;

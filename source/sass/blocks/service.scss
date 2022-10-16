@@ -84,6 +84,7 @@
 
     &:focus-visible {
       &::before {
+        outline: 1px groove $color-default-black;
         background-color: $color-default-white;
       }
 

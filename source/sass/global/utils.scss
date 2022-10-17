@@ -36,6 +36,20 @@
   list-style: none;
 }
 
+.hidden-767 {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.visible-767 {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
 .scroll-lock-ios {
   position: fixed;
 

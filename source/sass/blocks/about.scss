@@ -4,6 +4,11 @@
   align-items: flex-start;
   margin-bottom: 100px;
 
+  @include vp-1023 {
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
   @include vp-767 {
     margin-bottom: 80px;
   }
@@ -25,6 +30,14 @@
       display: none;
     }
   }
+
+  h2 {
+    line-height: 1.35;
+
+    @include vp-1023 {
+      line-height: 1;
+    }
+  }
 }
 
 .about__info {
@@ -41,6 +54,11 @@
 
 .about__info-detail {
   display: flex;
+  margin-top: 40px;
+
+  @include vp-1023 {
+    margin-top: 20px;
+  }
 
   &[open] {
     position: relative;
@@ -100,7 +118,9 @@
       right: 1px;
       top: 50%;
       transform: translateY(calc(-50% + 1px));
+      font-size: 14px;
       line-height: 1;
+      letter-spacing: 0.05em;
       background-color: $color-default-white;
       color: $color-deep-sky-blue;
       transition: color $trans-default, background-color $trans-default;

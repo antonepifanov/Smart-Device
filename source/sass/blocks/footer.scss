@@ -70,12 +70,29 @@
       flex-grow: unset;
     }
 
-    .footer__section-item {
-      max-width: 220px;
+    .footer__section-list {
+      flex-wrap: wrap;
+      align-content: flex-start;
+      height: 132px;
 
       @include vp-1023 {
-        max-width: unset;
+        flex-wrap: nowrap;
+        height: auto;
       }
+    }
+
+    .footer__section-item {
+      max-width: 220px;
+    }
+  }
+
+  &--tel {
+    @include vp-1023 {
+      margin-right: 10px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
     }
   }
 }
@@ -145,16 +162,8 @@
 .footer__section-list {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 9px;
   column-gap: 30px;
-  flex-wrap: wrap;
-  min-height: 132px;
-  height: 132px;
-
-  @include vp-1023 {
-    flex-wrap: nowrap;
-    height: auto;
-  }
 
   @include vp-767 {
     padding-left: 25px;

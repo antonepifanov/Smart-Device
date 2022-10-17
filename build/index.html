@@ -192,28 +192,28 @@
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
 
               <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-                <div class="feedback__form-input form__input">
+                <div class="feedback__form-input form__field">
                   <label class="visually-hidden" for="name">Введите Ваше имя</label>
                   <input type="text" id="name" name="name" placeholder="Имя" required>
                 </div>
 
-                <div class="feedback__form-input form__input">
+                <div class="feedback__form-input form__field">
                   <label class="visually-hidden" for="tel">Введите Ваше имя</label>
                   <input type="tel" id="tel" name="tel" placeholder="Телефон" minlength="17" maxlength="17" required>
                 </div>
 
-                <div class="feedback__form-textarea form__textarea">
+                <div class="feedback__form-textarea form__field">
                   <label class="visually-hidden" for="question">Введите Ваш вопрос</label>
                   <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
                 </div>
 
-                <div class="feddback__form-footer form__footer">
-                  <button class="button button--submit" type="submit">Задать вопрос</button>
-
+                <div class="feedback__form-footer form__footer">
                   <div class="feedback__form-checkbox form__checkbox">
                     <input class="visually-hidden" type="checkbox" id="accept" name="accept" checked required>
                     <label for="accept">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                   </div>
+
+                  <button class="button button--submit" type="submit">Задать вопрос</button>
                 </div>
               </form>
             </div>
@@ -329,9 +329,38 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2 class="title">Закажите звонок</h2>
+
+          <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+
+          <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+            <div class="form__field">
+              <label class="visually-hidden" for="modal-name">Введите Ваше имя</label>
+              <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required>
+            </div>
+
+            <div class="form__field">
+              <label class="visually-hidden" for="modal-tel">Введите Ваше имя</label>
+              <input type="tel" id="modal-tel" name="modal-tel" placeholder="Телефон" minlength="17" maxlength="17" required>
+            </div>
+
+            <div class="form__field">
+              <label class="visually-hidden" for="modal-question">Введите Ваш вопрос</label>
+              <textarea name="modal-question" id="modal-question" placeholder="Ваш вопрос"></textarea>
+            </div>
+
+            <div class="modal__form-footer form__footer">
+              <div class="modal__form-checkbox form__checkbox">
+                <input class="visually-hidden" type="checkbox" id="modal-accept" name="modal-accept" checked required>
+                <label for="modal-accept">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </div>
+
+              <button class="button button--submit" type="submit">Отправить</button>
+            </div>
+          </form>
+
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>

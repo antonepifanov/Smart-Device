@@ -126,9 +126,5 @@
       transition: color $trans-default, background-color $trans-default;
       z-index: 10;
     }
-
-    &::webkit-details-marker {
-      display: none;
-    }
   }
 }

@@ -1,2 +1,1 @@
-// iMask
-import './vendor/imask';
+

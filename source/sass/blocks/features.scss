@@ -8,7 +8,7 @@
 
   @include vp-1023 {
     padding-top: 88px;
-    margin-bottom: 72px;
+    margin-bottom: 75px;
   }
 
   @include vp-767 {
@@ -41,13 +41,14 @@
 
   @include vp-1023 {
     min-height: 360px;
-    padding: 40px 45px 35px;
+    gap: 5px;
+    padding: 40px 45px 30px 40px;
   }
 
   @include vp-767 {
     min-height: 340px;
     padding: 25px;
-    gap: 12px;
+    gap: 10px;
   }
 
   &--smaller {
@@ -70,6 +71,14 @@
 
   svg {
     margin-bottom: 5px;
+
+    @include vp-1023 {
+      margin-bottom: 10px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
   }
 
   strong {
@@ -77,9 +86,15 @@
     font-size: 24px;
     font-weight: 400;
 
+    @include vp-1023 {
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+
     @include vp-767 {
+      margin-bottom: 0;
       font-size: 20px;
-      line-height: 1.4;
+      line-height: 1.5;
     }
   }
 
@@ -92,7 +107,7 @@
 
     @include vp-767 {
       font-size: 14px;
-      line-height: 1.25;
+      line-height: 1.35;
     }
   }
 }

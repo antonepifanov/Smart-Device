@@ -6,12 +6,12 @@
   @include vp-1023 {
     background: none;
     background-color: $color-deep-sky-blue;
-    padding-top: 50px;
-    padding-bottom: 120px;
+    padding-top: 49px;
+    padding-bottom: 124px;
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 49px;
     padding-bottom: 90px;
   }
 }
@@ -58,12 +58,13 @@
     line-height: 1.35;
 
     @include vp-1023 {
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
 
     @include vp-767 {
       font-size: 30px;
-      line-height: 1.25;
+      line-height: 1.3;
+      margin-bottom: 9px;
     }
   }
 
@@ -74,7 +75,7 @@
     line-height: 1.38;
 
     @include vp-1023 {
-      margin-bottom: 25px;
+      margin-bottom: 23px;
     }
 
     @include vp-767 {
@@ -103,8 +104,13 @@
 
 .feedback__form-textarea {
   textarea {
+    @include vp-1023 {
+      padding-top: 32px;
+    }
+
     @include vp-767 {
       min-height: 180px;
+      padding-top: 25px;
     }
   }
 }
@@ -120,6 +126,7 @@
   }
 
   @include vp-1023 {
+    margin-top: 15px;
     gap: 85px;
   }
 

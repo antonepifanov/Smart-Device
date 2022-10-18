@@ -4,8 +4,8 @@
   padding-bottom: 140px;
 
   @include vp-1023 {
-    padding-top: 60px;
-    padding-bottom: 75px;
+    padding-top: 58px;
+    padding-bottom: 80px;
   }
 
   @include vp-767 {
@@ -152,6 +152,7 @@
 
     @include vp-767 {
       font-size: 18px;
+      line-height: 1.4;
     }
   }
 

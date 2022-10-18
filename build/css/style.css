@@ -1797,7 +1797,7 @@ button,
   }
 
   .footer {
-    padding-top: 50px;
+    padding-top: 52px;
     padding-bottom: 65px;
   }
 
@@ -1939,23 +1939,45 @@ button,
     margin-right: 10px;
   }
 
+  .footer__social {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    gap: 12px;
+  }
+
   .features {
     padding-top: 88px;
-    margin-bottom: 72px;
+    margin-bottom: 75px;
   }
 
   .features__item {
     min-height: 360px;
-    padding: 40px 45px 35px;
+    gap: 5px;
+    padding: 40px 45px 30px 40px;
+  }
+
+  .features__item svg {
+    margin-bottom: 10px;
+  }
+
+  .features__item strong {
+    line-height: 1.35;
+    margin-bottom: 5px;
   }
 
   .about {
-    gap: 30px;
-    margin-bottom: 80px;
+    gap: 27px;
+    margin-bottom: 77px;
   }
 
   .about h2 {
     line-height: 1;
+    margin-bottom: 17px;
+  }
+
+  .about__info p {
+    margin: 0;
+    margin-bottom: 20px;
   }
 
   .about__info-detail {
@@ -1963,8 +1985,8 @@ button,
   }
 
   .service {
-    padding-top: 60px;
-    padding-bottom: 75px;
+    padding-top: 58px;
+    padding-bottom: 80px;
   }
 
   .service__inner h2 {
@@ -2014,8 +2036,8 @@ button,
   .feedback {
     background: none;
     background-color: #00b2ff;
-    padding-top: 50px;
-    padding-bottom: 120px;
+    padding-top: 49px;
+    padding-bottom: 124px;
   }
 
   .feedback__inner::before {
@@ -2023,14 +2045,19 @@ button,
   }
 
   .feedback__content h2 {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   .feedback__content p {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
+  }
+
+  .feedback__form-textarea textarea {
+    padding-top: 32px;
   }
 
   .feedback__form-footer {
+    margin-top: 15px;
     gap: 85px;
   }
 }
@@ -2151,6 +2178,13 @@ button,
     margin-right: 0;
   }
 
+  .footer__social {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    gap: 15px;
+  }
+
   .footer__section-title {
     pointer-events: auto;
     padding-left: 25px;
@@ -2258,21 +2292,26 @@ button,
   .features__item {
     min-height: 340px;
     padding: 25px;
-    gap: 12px;
+    gap: 10px;
   }
 
   .features__item--smaller {
     min-height: 325px;
   }
 
+  .features__item svg {
+    margin-bottom: 5px;
+  }
+
   .features__item strong {
+    margin-bottom: 0;
     font-size: 20px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .features__item p {
     font-size: 14px;
-    line-height: 1.25;
+    line-height: 1.35;
   }
 
   .title {
@@ -2281,7 +2320,7 @@ button,
   }
 
   .about {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 
   .about::before {
@@ -2290,6 +2329,11 @@ button,
 
   .about__info p {
     font-size: 14px;
+  }
+
+  .about__info-detail {
+    position: relative;
+    top: -8px;
   }
 
   .about__info-detail summary {
@@ -2322,6 +2366,7 @@ button,
 
   .service__card b {
     font-size: 18px;
+    line-height: 1.4;
   }
 
   .service__card--1 img {
@@ -2346,13 +2391,14 @@ button,
   }
 
   .feedback {
-    padding-top: 50px;
+    padding-top: 49px;
     padding-bottom: 90px;
   }
 
   .feedback__content h2 {
     font-size: 30px;
-    line-height: 1.25;
+    line-height: 1.3;
+    margin-bottom: 9px;
   }
 
   .feedback__content p {
@@ -2373,6 +2419,7 @@ button,
 
   .feedback__form-textarea textarea {
     min-height: 180px;
+    padding-top: 25px;
   }
 
   .feedback__form-footer {

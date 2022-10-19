@@ -125,6 +125,9 @@
       position: absolute;
       content: "Подробнее";
       width: calc(100% - 2px);
+      height: 40px;
+      display: grid;
+      place-items: center;
       left: 1px;
       right: 1px;
       top: 50%;
@@ -136,6 +139,10 @@
       color: $color-deep-sky-blue;
       transition: color $trans-default, background-color $trans-default;
       z-index: 10;
+
+      @include vp-767 {
+        height: 30px;
+      }
     }
   }
 }

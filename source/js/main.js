@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordeon} from './modules/init-accordeon';
 import {initPhoneMask} from './modules/init-phone-mask';
-// ---------------------------------
+import {initValidation} from './modules/init-validation';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
@@ -15,5 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initAccordeon();
     initPhoneMask();
+    initValidation();
   });
 });

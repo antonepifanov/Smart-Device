@@ -36,7 +36,9 @@
   gap: 85px;
 
   @include vp-1919 {
-    gap: 30px;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(auto, 350px));
+    justify-content: space-between;
   }
 
   @include vp-1023 {
@@ -48,13 +50,11 @@
   li {
     display: flex;
     min-height: 650px;
+    max-width: 350px;
     overflow: hidden;
 
-    @include vp-1919 {
-      min-height: 400px;
-    }
-
     @include vp-1023 {
+      max-width: unset;
       min-height: 250px;
     }
   }

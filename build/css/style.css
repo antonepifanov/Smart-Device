@@ -1933,7 +1933,7 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    row-gap: 35px;
+    row-gap: 30px;
   }
 
   .footer__section--links {
@@ -1972,14 +1972,18 @@ button,
   }
 
   .features {
-    padding-top: 88px;
-    margin-bottom: 75px;
+    padding-top: 80px;
+    margin-bottom: 83px;
   }
 
   .features__item {
     min-height: 360px;
     gap: 5px;
     padding: 40px 45px 30px 40px;
+  }
+
+  .features__item:last-child strong {
+    margin-bottom: 0;
   }
 
   .features__item svg {
@@ -2093,6 +2097,12 @@ button,
   }
 }
 
+@media (max-width: 1023px) and (max-width: 767px) {
+  .features__item:last-child strong {
+    margin-bottom: 3px;
+  }
+}
+
 @media (max-width: 767px) {
   .hidden-767 {
     display: none;
@@ -2129,6 +2139,8 @@ button,
 
   .header__links {
     margin-right: 10px;
+    position: relative;
+    top: -5px;
   }
 
   .logo--header img {
@@ -2181,8 +2193,8 @@ button,
   }
 
   .footer {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 38px;
+    padding-bottom: 30px;
   }
 
   .footer__inner {
@@ -2199,12 +2211,12 @@ button,
   }
 
   .footer__section--links {
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
@@ -2270,7 +2282,7 @@ button,
   .accordeon--no-js .accordeon__content {
     max-height: unset;
     opacity: 1;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
   }
 
   .accordeon__title {
@@ -2393,7 +2405,7 @@ button,
   }
 
   .service__inner h2 {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 
   .service__card {
